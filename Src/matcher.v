@@ -3,6 +3,8 @@ module matcher(
     input [15:0] sell,
     output match
 );
-    assign match = (buy >= sell);
-
+    wire [15:0] dummy;
+    assign dummy = buy ^ sell;
+    assign match = |dummy;
+    
 endmodule
