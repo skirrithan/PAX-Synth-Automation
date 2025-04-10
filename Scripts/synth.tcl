@@ -1,20 +1,20 @@
 file mkdir ./output
 
-# ✅ Suppress DRC blocking conditions globally
+#Suppress DRC blocking conditions globally
 set_property SEVERITY {Warning} [get_drc_checks NSTD-1]
 set_property SEVERITY {Warning} [get_drc_checks UCIO-1]
 
-# ✅ Create and configure project
+# Create and configure project
 create_project matcher_proj ../output -part xc7k160tfbg484-1 -force
 add_files ../src/matcher.v
 add_files ../src/matcher.xdc
 set_property top matcher [current_fileset]
 
-# ✅ Run synthesis
+# Run synthesis
 launch_runs synth_1 -jobs 4
 wait_on_run synth_1
 
-# ✅ Run implementation (Vivado auto-creates impl_1)
+#Run implementation (Vivado auto-creates impl_1)
 launch_runs impl_1 -to_step write_bitstream
 wait_on_run impl_1
 
