@@ -1,10 +1,10 @@
-# 🚀 PAX Markets FPGA Proof of Concept - Automated Synthesis & Bitstream Generation
+# PAX Markets FPGA Proof of Concept - Automated Synthesis & Bitstream Generation
 
 This project demonstrates a **hardware-automated synthesis flow** targeting Xilinx FPGAs, with a focus on **event-driven matching logic**, designed as a proof-of-concept (PoC) for **PAX Markets**. It showcases the feasibility of using FPGAs for high-performance financial applications and prepares the ground for **AWS EC2 F1 deployment**.
 
 ---
 
-## 🧠 Project Overview
+## Project Overview
 
 - ✅ Hardware matcher module in Verilog (`matcher.v`)
 - ✅ Full synthesis and bitstream automation using a Windows `.bat` script
@@ -13,7 +13,7 @@ This project demonstrates a **hardware-automated synthesis flow** targeting Xili
 
 ---
 
-## 🛠️ Environment Setup
+## Environment Setup
 
 ### Requirements
 
@@ -24,7 +24,7 @@ This project demonstrates a **hardware-automated synthesis flow** targeting Xili
 
 ---
 
-## 📁 File Structure
+## File Structure
 
 ```
 PAX-Synth-Automation/
@@ -40,7 +40,7 @@ PAX-Synth-Automation/
 
 ---
 
-## ▶️ How to Run the Project
+## How to Run the Project
 
 1. Make sure `matcher.v` and `matcher.xdc` are in `src/`
 2. From the root directory, run:
@@ -58,7 +58,7 @@ This will:
 
 ---
 
-## 🔄 Bitstream Output
+## Bitstream Output
 
 Once the script completes successfully, the generated bitstream file will be located at:
 
@@ -70,7 +70,7 @@ This `.bit` file can be used for FPGA programming or be wrapped for cloud deploy
 
 ---
 
-## 🧠 Understanding the Matcher Logic
+## Understanding the Matcher Logic
 
 ```verilog
 module matcher(
@@ -86,9 +86,9 @@ A simple price comparator: emits `1` on `match` if buy >= sell. In practice, thi
 
 ---
 
-## ☁️ Forward Thinking: AWS EC2 F1 Integration
+## Forward Thinking: AWS EC2 F1 Integration
 
-### 🔧 Future Deployment Steps
+### Future Deployment Steps
 
 This project is designed to be easily migrated to an AWS EC2 FPGA setup using Xilinx’s AWS toolchain:
 
@@ -104,7 +104,7 @@ This project is designed to be easily migrated to an AWS EC2 FPGA setup using Xi
 
 ---
 
-## 💼 Relevance to PAX Markets
+## Relevance to PAX Markets
 
 This PoC reflects:
 - Deep understanding of low-latency hardware workflows
@@ -114,7 +114,7 @@ This PoC reflects:
 
 ---
 
-## 🧠 Final Notes
+## Final Notes
 
 While simple, this project emphasizes **workflow reproducibility**, **hardware logic clarity**, and **cloud-readiness**. These traits are critical for deploying FPGA-based accelerators in fast-moving production environments like those at **PAX Markets**.
 
