@@ -32,7 +32,7 @@ PAX-Synth-Automation/
 │   ├── matcher.v           # Core Verilog design (simple price matcher)
 │   └── matcher.xdc         # I/O constraints for xc7k160tfbg484-1
 ├── scripts/
-│   └── synth.bat           # Batch file automating Vivado synthesis + bitstream generation
+│   └── synth.bat           # Automates synth + bitstream generation
 ├── output/
 │   └── matcher.bit         # Generated bitstream file
 ├── README.md               # You're reading this
